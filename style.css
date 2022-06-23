@@ -140,7 +140,6 @@ td.products {
   width: 500px;
   height: 500px;
   background-color: rgba(233, 229, 229, 0.9);
-  /* filter: blur(15px); */
   border-radius: 100px;
   border-collapse: collapse;
   overflow: hidden;
@@ -149,21 +148,21 @@ td.products {
 
 img.products {
   display: block;
-  max-width: 100%;
+  max-width: 350px;
   max-height: 350px;
   margin-left: auto;
   margin-right: auto;
   z-index: 0;
 }
 img.products:hover {
-  /* content: url(/assets/picture/mobile1.png); */
   transform: scale(2);
 }
-h3 {
+h3.products {
   position: relative;
+  text-align: center;
   z-index: 0;
   right: 50%;
-  left: 50%;
+  left: 0%;
   transform: translate(-50%, -50%);
   background-color: rgba(233, 229, 229, 0.9);
 }
@@ -197,16 +196,16 @@ h4 {
 }
 
 #shadow1 {
-  background-color: #0088ff;
+  background-color: #0000ff;
 }
 
 #shadow2 {
-  background-color: #d400ff;
+  background-color: #c300ff;
   animation-delay: 5s;
 }
 
 #shadow3 {
-  background-color: #ff9d00;
+  background-color: #fbff00;
   animation-delay: 10s;
 }
 
@@ -215,7 +214,7 @@ h4 {
   animation-delay: 15s;
 }
 #shadow5 {
-  background-color: #00ff3c;
+  background-color: #ff9d00;
   animation-delay: 20s;
 }
 #shadow6 {
@@ -223,12 +222,8 @@ h4 {
   animation-delay: 25s;
 }
 #shadow7 {
-  background-color: #3700ff;
+  background-color: #00ff08;
   animation-delay: 30s;
-}
-#shadow8 {
-  background-color: #fbff00;
-  animation-delay: 35s;
 }
 
 @keyframes pulse {
@@ -297,9 +292,9 @@ textarea:hover {
   color: #726659;
 }
 
-/* .contactTable,
+.contactTable,
 td.contactTable,
-a {
+a.contactTable {
   color: black;
   font-size: 25px;
   text-decoration: none;
@@ -307,6 +302,6 @@ a {
   position: fixed;
   width: max-content;
   height: 40px;
-  /* float: left;
+  float: left;
   bottom: 5px;
-} */
+}
