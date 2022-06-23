@@ -1,13 +1,5 @@
 /*--------------------------------------------------------------------------------------------------------------------------- GENERAL */
 @font-face {
-  font-family: fontLight;
-  src: url(/assets/font/AnekMalayalam-ExtraLight.ttf);
-}
-@font-face {
-  font-family: fontThin;
-  src: url(/assets/font/AnekMalayalam-Thin.ttf);
-}
-@font-face {
   font-family: newFont;
   src: url(/assets/font/Montserrat/Montserrat-ExtraLight.ttf);
 }
@@ -67,7 +59,7 @@ ul li {
 ul li a {
   padding: 10px;
   display: inline-block;
-  font-family: fontLight;
+  font-family: newFont;
   font-size: 2em;
   text-decoration: none;
   text-transform: uppercase;
@@ -115,7 +107,7 @@ h1 {
 }
 
 h2 {
-  font-family: fontThin;
+  font-family: newFont;
   font-size: 50px;
   text-align: inherit;
   margin: 0;
