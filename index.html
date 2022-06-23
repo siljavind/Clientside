@@ -11,28 +11,31 @@
 </head>
 
 <body>
-    <svg class="toggle">
+    <svg class="menuLogo colorLogo">
+        <!-- Company logo and access to navigation bar/menu -->
         <path
             d="M52 2 2 52 52 102 102 52 52 2M52 51 52 17M52 102 52 137M32 72 52 51 72 72M22 82 2 102 52 152 102 102 82 82">
         </path>
     </svg>
 
     <div class="menu">
+        <!-- Pop out menu-->
         <ul>
             <li><a href="/index.html">Home</a></li>
-            <!-- <li><a href="#">About</a></li> -->
             <li><a href="/shop.html">Shop</a></li>
-            <!-- <li><a href="#">Portfolio</a></li> -->
             <li><a href="/contact.html">Contact</a></li>
         </ul>
     </div>
 
-    <!-- <video src="assets/video/featherFloating.mp4" id="backgroundVideo">type="video/mp4" autoplay </video> -->
-    <video src="/assets/video/fullGoose.mp4" id="backgroundVideo" type="video/mp4" autoplay loop muted></video>
+    <!-- <video src="assets/video/featherFloating.mp4" id="backgroundVideo">type="video/mp4" autoplay </video>
+    Attempt at playing individual video clips as background. Couldn't get rid of flashes of background while loading next clip-->
 
-    <div class="main">
-        <h1>Geese Goose</h1>
-        <h2>Peace was never an option</h2>
+    <video src="/assets/video/fullGoose.mp4" id="backgroundVideo" type="video/mp4" autoplay loop muted></video>
+    <!-- Ended up just editing the clips together in an external editor (also.. Shutterstock <3)-->
+
+    <div class="businessName">
+        <h1 class="name">Geese Goose</h1>
+        <h2 class="name">Peace was never an option</h2>
     </div>
 
     <script src="script.js"></script>

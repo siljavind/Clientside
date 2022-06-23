@@ -1,35 +1,36 @@
-/*--------------------------------------------------------------------------------------------------------------------------- GENERAL */
+/* GENERAL ------------------------------------------------------------------------------------------------------------------- GENERAL */
 @font-face {
-  font-family: newFont;
+  font-family: myFont;
   src: url(/assets/font/Montserrat/Montserrat-ExtraLight.ttf);
 }
+
 body {
-  font-family: newFont;
-  /* --background-color: green; */
-  --background-color: rgb(250, 241, 230);
-  background-color: var(--background-color);
+  font-family: myFont;
+  background-color: rgb(250, 241, 230);
   --companyColor: #f77320;
   color: var(--companyColor);
   background-size: cover;
 }
 
-/* NAVBAR *************************************/
-.toggle {
+/* NAVBAR *************************************** NAVBAR */
+.menuLogo {
   position: fixed;
   top: 50px;
   left: 50px;
   z-index: 2;
-  stroke: var(--companyColor);
+  stroke: black;
   stroke-width: 2px;
   fill: none;
   width: 110px;
   height: 160px;
 }
-.toggle:hover {
+
+.menuLogo:hover {
   stroke: black;
-  filter: drop-shadow(0px 0px 10px rgba(255, 255, 255, 1));
+  filter: drop-shadow(0px 0px 1.5px rgba(0, 0, 0, 1));
   transition: 0.3s ease;
 }
+
 .menu {
   position: fixed;
   margin: 0;
@@ -43,6 +44,7 @@ body {
   z-index: 1;
   transition: 0.8s;
 }
+
 ul {
   margin: 0;
   padding: 0;
@@ -52,6 +54,7 @@ ul {
   transform: translate(-50%, -50%);
   text-align: center;
 }
+
 ul li {
   list-style: none;
 }
@@ -59,23 +62,29 @@ ul li {
 ul li a {
   padding: 10px;
   display: inline-block;
-  font-family: newFont;
+  font-family: myFont;
   font-size: 2em;
   text-decoration: none;
   text-transform: uppercase;
   color: #262626;
 }
+
 ul li a:hover {
   background: var(--companyColor);
 }
+
 .menu.active {
   left: 0;
   overflow: auto;
 }
 
-/*-------------------------------------------------------------------------------------------------------------------------- HOMEPAGE */
+.colorLogo {
+  stroke: var(--companyColor);
+}
 
-/* BACKGROUND ***********************************/
+/* MAIN PAGE --------------------------------------------------------------------------------------------------------------- MAIN PAGE */
+
+/* BACKGROUND ******************************************* BACKGROUND */
 #backgroundVideo {
   position: absolute;
   right: 0px;
@@ -88,16 +97,18 @@ ul li a:hover {
   background-size: cover;
 }
 
-/* TEXT ******************************************/
-.main {
+/* BUSINESS NAME **************************************** BUSINESS NAME */
+.businessName {
   position: fixed;
   width: fit-content;
   top: 60%;
   left: 50%;
   transform: translate(-50%, -50%);
   text-align: center;
+  user-select: none;
 }
-h1 {
+
+h1.name {
   --fontsize: 150px;
   font-size: var(--fontsize);
   text-align: inherit;
@@ -106,21 +117,28 @@ h1 {
   text-transform: uppercase;
 }
 
-h2 {
-  font-family: newFont;
+h2.name {
+  font-family: myFont;
   font-size: 50px;
   text-align: inherit;
   margin: 0;
   text-transform: uppercase;
 }
-h3 {
+h1.blackName,
+h2.blackName {
+  color: black;
+  text-align: center;
+  margin-top: 50px;
+}
+
+/* h3 {
   color: black;
   font-size: 20px;
   text-align: center;
   text-transform: uppercase;
-}
+} */
 
-/*------------------------------------------------------------------------------------------------------------------------------ SHOP */
+/* SHOP ------------------------------------------------------------------------------------------------------------------------- SHOP */
 .bodyShop {
   background-image: url(/assets/svg/blobScatter4.svg),
     url(/assets/svg/blobScatter3.svg);
@@ -128,6 +146,7 @@ h3 {
     url(/assets/svg/blobOutline2.svg); */
   background-color: rgba(233, 229, 229, 0.9);
 }
+
 .products {
   width: 80%;
   margin-top: 100px;
@@ -148,25 +167,18 @@ td.products {
 
 img.products {
   display: block;
-  max-width: 350px;
-  max-height: 350px;
+  max-width: 200px;
+  max-height: 300px;
   margin-left: auto;
   margin-right: auto;
   z-index: 0;
 }
+
 img.products:hover {
   transform: scale(2);
 }
-h3.products {
-  position: relative;
-  text-align: center;
-  z-index: 0;
-  right: 50%;
-  left: 0%;
-  transform: translate(-50%, -50%);
-  background-color: rgba(233, 229, 229, 0.9);
-}
-h4 {
+h3.product,
+h4.price {
   position: relative;
   text-align: center;
   z-index: 0;
@@ -176,12 +188,25 @@ h4 {
   background-color: rgba(233, 229, 229, 0.9);
   color: black;
   text-transform: uppercase;
+  margin-bottom: 10px;
+}
+h3.product {
+  font-size: 25px;
 }
 
-/*--------------------------------------------------------------------------------------------------------------------------- CONTACT */
+h4.price {
+  font-size: 20px;
+}
 
-/* SHADOWS ***********************************************************************/
-.shadow {
+::-webkit-scrollbar {
+  width: 0px;
+  height: 0px;
+}
+
+/* CONTACT ------------------------------------------------------------------------------------------------------------------- CONTACT */
+
+/* SHADOWS ***************************************************** SHADOWS */
+.dot {
   position: fixed;
 
   display: block;
@@ -195,33 +220,36 @@ h4 {
   bottom: 0;
 }
 
-#shadow1 {
+#dot1 {
   background-color: #0000ff;
 }
 
-#shadow2 {
+#dot2 {
   background-color: #c300ff;
   animation-delay: 5s;
 }
 
-#shadow3 {
+#dot3 {
   background-color: #fbff00;
   animation-delay: 10s;
 }
 
-#shadow4 {
+#dot4 {
   background-color: #ff00ff;
   animation-delay: 15s;
 }
-#shadow5 {
+
+#dot5 {
   background-color: #ff9d00;
   animation-delay: 20s;
 }
-#shadow6 {
+
+#dot6 {
   background-color: #ff0000;
   animation-delay: 25s;
 }
-#shadow7 {
+
+#dot7 {
   background-color: #00ff08;
   animation-delay: 30s;
 }
@@ -242,13 +270,12 @@ h4 {
   }
 }
 
-/* CONTACT FORM ******************************************************************/
-
+/* CONTACT FORM *************************************** CONTACT FORM */
 #form {
   position: relative;
   width: 500px;
   margin: 50px auto 100px auto;
-  font-family: newFont;
+  font-family: myFont;
   color: #726659;
   font-size: 1em;
 }
@@ -274,7 +301,7 @@ textarea {
   outline: none;
   border: solid 1px #726659;
   transition: all 0.3s ease-in-out;
-  font-family: newFont;
+  font-family: myFont;
   color: #726659;
 }
 

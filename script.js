@@ -1,25 +1,25 @@
 $(document).ready(function () {
-    $('.toggle').click(function () {
+    $('.menuLogo').click(function () {
         $('.menu').toggleClass('active');
     });
 });
 
-function createShadow() {
-    const shadowID = ["shadow1", "shadow2", "shadow3", "shadow4", "shadow5", "shadow6", "shadow7", "shadow8"]
+function createDot() {
+    const dotID = ["dot1", "dot2", "dot3", "dot4", "dot5", "dot6", "dot7"]
 
     d3.select("body")
         .insert("div", ":first-child") //inserts before first child of parent (body)
-        .attr("id", "shadowContainer");
+        .attr("id", "dotContainer");
 
-    for (let i = 0; i < shadowID.length; i++) {
-        d3.select("#shadowContainer")
+    for (let i = 0; i < dotID.length; i++) {
+        d3.select("#dotContainer")
             .insert("div")
-            .classed("shadow", true)
-            .attr("id", shadowID[i]);
+            .classed("dot", true)
+            .attr("id", dotID[i]);
     };
 };
 
-createShadow();
+createDot();
 
 // function trackerShadow() {
 
