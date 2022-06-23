@@ -1,0 +1,320 @@
+/*--------------------------------------------------------------------------------------------------------------------------- GENERAL */
+@font-face {
+  font-family: fontLight;
+  src: url(/Final/assets/font/AnekMalayalam-ExtraLight.ttf);
+}
+@font-face {
+  font-family: fontThin;
+  src: url(/Final/assets/font/AnekMalayalam-Thin.ttf);
+}
+@font-face {
+  font-family: newFont;
+  src: url(/Final/assets/font/Montserrat/Montserrat-ExtraLight.ttf);
+}
+body {
+  font-family: newFont;
+  /* --background-color: green; */
+  --background-color: rgb(250, 241, 230);
+  background-color: var(--background-color);
+  --companyColor: #f77320;
+  color: var(--companyColor);
+  background-size: cover;
+}
+
+/* NAVBAR *************************************/
+.toggle {
+  position: fixed;
+  top: 50px;
+  left: 50px;
+  z-index: 2;
+  stroke: var(--companyColor);
+  stroke-width: 2px;
+  fill: none;
+  width: 110px;
+  height: 160px;
+}
+.toggle:hover {
+  stroke: black;
+  filter: drop-shadow(0px 0px 10px rgba(255, 255, 255, 1));
+  transition: 0.3s ease;
+}
+.menu {
+  position: fixed;
+  margin: 0;
+  padding: 0;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background-image: url(/Final/assets/svg/blobScene3.svg);
+  background-size: cover;
+  z-index: 1;
+  transition: 0.8s;
+}
+ul {
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+ul li {
+  list-style: none;
+}
+
+ul li a {
+  padding: 10px;
+  display: inline-block;
+  font-family: fontLight;
+  font-size: 2em;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #262626;
+}
+ul li a:hover {
+  background: var(--companyColor);
+}
+.menu.active {
+  left: 0;
+  overflow: auto;
+}
+
+/*-------------------------------------------------------------------------------------------------------------------------- HOMEPAGE */
+
+/* BACKGROUND ***********************************/
+#backgroundVideo {
+  position: absolute;
+  right: 0px;
+  bottom: 0px;
+  min-width: 100%;
+  min-height: 100%;
+  filter: brightness(50%) grayscale(50%);
+  z-index: -1;
+  overflow: hidden;
+  background-size: cover;
+}
+
+/* TEXT ******************************************/
+.main {
+  position: fixed;
+  width: fit-content;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+h1 {
+  --fontsize: 150px;
+  font-size: var(--fontsize);
+  text-align: inherit;
+  margin: 0;
+  height: var(--fontsize + 1px);
+  text-transform: uppercase;
+}
+
+h2 {
+  font-family: fontThin;
+  font-size: 50px;
+  text-align: inherit;
+  margin: 0;
+  text-transform: uppercase;
+}
+h3 {
+  color: black;
+  font-size: 20px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+/*------------------------------------------------------------------------------------------------------------------------------ SHOP */
+.bodyShop {
+  background-image: url(/Final/assets/svg/blobScatter4.svg),
+    url(/Final/assets/svg/blobScatter3.svg);
+  /* url(/Final/assets/svg/blobOutline3.svg),
+    url(/Final/assets/svg/blobOutline2.svg); */
+  background-color: rgba(233, 229, 229, 0.9);
+}
+.products {
+  width: 80%;
+  margin-top: 100px;
+  margin-left: auto;
+  margin-right: auto;
+  border-spacing: 50px;
+}
+
+td.products {
+  width: 500px;
+  height: 500px;
+  background-color: rgba(233, 229, 229, 0.9);
+  /* filter: blur(15px); */
+  border-radius: 100px;
+  border-collapse: collapse;
+  overflow: hidden;
+  border: 1px solid black;
+}
+
+img.products {
+  display: block;
+  max-width: 100%;
+  max-height: 350px;
+  margin-left: auto;
+  margin-right: auto;
+  z-index: 0;
+}
+img.products:hover {
+  /* content: url(/Final/assets/picture/mobile1.png); */
+  transform: scale(2);
+}
+h3 {
+  position: relative;
+  z-index: 0;
+  right: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(233, 229, 229, 0.9);
+}
+h4 {
+  position: relative;
+  text-align: center;
+  z-index: 0;
+  right: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(233, 229, 229, 0.9);
+  color: black;
+  text-transform: uppercase;
+}
+
+/*--------------------------------------------------------------------------------------------------------------------------- CONTACT */
+
+/* SHADOWS ***********************************************************************/
+.shadow {
+  position: fixed;
+
+  display: block;
+  transform: translate(-50%, -50%);
+  /* filter: blur(1px); */
+  animation: pulse 35s infinite;
+  transition: 950ms ease-out;
+  clip-path: circle();
+  z-index: -1;
+  right: 0;
+  bottom: 0;
+}
+
+#shadow1 {
+  background-color: #0088ff;
+}
+
+#shadow2 {
+  background-color: #d400ff;
+  animation-delay: 5s;
+}
+
+#shadow3 {
+  background-color: #ff9d00;
+  animation-delay: 10s;
+}
+
+#shadow4 {
+  background-color: #ff00ff;
+  animation-delay: 15s;
+}
+#shadow5 {
+  background-color: #00ff3c;
+  animation-delay: 20s;
+}
+#shadow6 {
+  background-color: #ff0000;
+  animation-delay: 25s;
+}
+#shadow7 {
+  background-color: #3700ff;
+  animation-delay: 30s;
+}
+#shadow8 {
+  background-color: #fbff00;
+  animation-delay: 35s;
+}
+
+@keyframes pulse {
+  0% {
+    width: 0;
+    height: 0;
+  }
+
+  50% {
+    width: 2500px;
+    height: 2500px;
+  }
+  100% {
+    width: 0;
+    height: 0;
+  }
+}
+
+/* CONTACT FORM ******************************************************************/
+
+#form {
+  position: relative;
+  width: 500px;
+  margin: 50px auto 100px auto;
+  font-family: newFont;
+  color: #726659;
+  font-size: 1em;
+}
+
+input {
+  width: 470px;
+  height: 50px;
+  padding: 0px 15px 0px 15px;
+  background: rgba(250, 241, 230, 0.7);
+  outline: none;
+  border: solid 1px #726659;
+  border-bottom: none;
+  transition: all 0.3s ease-in-out;
+}
+
+textarea {
+  width: 470px;
+  max-width: 470px;
+  height: 110px;
+  max-height: 110px;
+  padding: 15px;
+  background: rgba(250, 241, 230, 0.7);
+  outline: none;
+  border: solid 1px #726659;
+  transition: all 0.3s ease-in-out;
+  font-family: newFont;
+  color: #726659;
+}
+
+textarea:hover {
+  background: var(--background-color);
+}
+
+#submit {
+  width: 502px;
+  padding: 0;
+  margin: -5px 0px 0px 0px;
+  outline: none;
+  cursor: pointer;
+  border: solid 1px #726659;
+  color: #726659;
+}
+
+/* .contactTable,
+td.contactTable,
+a {
+  color: black;
+  font-size: 25px;
+  text-decoration: none;
+  display: inline-block;
+  position: fixed;
+  width: max-content;
+  height: 40px;
+  /* float: left;
+  bottom: 5px;
+} */
